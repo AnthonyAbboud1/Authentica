@@ -8,9 +8,24 @@ const realityDefender = new RealityDefender({
 async function detectImage() {
   try {
     const result = await realityDefender.detect({
-      filePath: './test.jpg', // make sure this path exists
+      filePath: './pope-drip.jpg', // make sure this path exists
     });
+    
+    const status = result.status;
+    const score = result.score;
+    
+    // Convert score to percentage confidence
+    // higher score = more manipulated
+    const manipulationPercentage = Math.round(score * 100);
+    const authenticityPercentage = Math.round((1 - score) * 100);
+    
     console.log('✅ Detection result:', result);
+    console.log('Status:', status);
+    console.log('Score:', score);
+    console.log('Manipulation confidence:', manipulationPercentage + '%');
+    console.log('Authenticity confidence:', authenticityPercentage + '%');
+    
+    // status: 'MANIPULATED' or 'AUTHENTIC'
   } catch (err) {
     console.error('❌ Error:', err);
   }
