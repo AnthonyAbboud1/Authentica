@@ -1,0 +1,99 @@
+
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  overflow: hidden; 
+}
+
+
+.app {
+  background-color: #d64545;
+  color: white;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.nav-links a {
+  margin-left: 2rem;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.subtitle {
+  margin-bottom: 2.5rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+
+.upload-box {
+  background: #f8f9fa;
+  color: #333;
+  border-radius: 10px;
+  padding: 2.5rem;
+  text-align: center;
+  width: 400px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.upload-icon {
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.upload-text {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.upload-btn {
+  background-color: #d64545;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.upload-btn:hover {
+  background-color: #b73737;
+}
